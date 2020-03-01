@@ -28,6 +28,19 @@ public class Job {
     }
 
     @Override
+    public String toString() {
+        String errorMessage = "Data not available";
+        return "\n" +
+                "ID: " + id + "\n" +
+                "Name: " + (name != null?name:errorMessage)+ "\n" +
+                "Employer: " + (employer!= null?employer:errorMessage) + "\n" +
+                "Location: " + (location!= null?location:errorMessage) + "\n" +
+                "Position Type: " + (positionType!= null?positionType:errorMessage) + "\n" +
+                "Core Competency: " + (coreCompetency!= null?coreCompetency:errorMessage) +
+                '\n';
+    }
+
+    @Override
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
         if (this == o) return true;
         if (!(o instanceof Job)) return false;
