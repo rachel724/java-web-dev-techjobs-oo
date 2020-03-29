@@ -8,6 +8,7 @@ public abstract class JobField {
     public String value;
 
     public JobField (String aValue) {
+        this();
         value = aValue;
     }
 
